@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div>
+    <h1 align="center">
+        Type anything slowly!
+    </h1>
+    <p align="center">
+        <textarea rows="12" cols="50" id="text" onkeydown="faking()" name="txt"></textarea>
+    </p>
+
+</div>
+<script>
+    let origin = "hôm nay là ngày thứ 2";
+    let type = origin.split("");
+    let text = document.getElementById("text");
+    function faking() {
+        let fakeText = "";
+        for (let i =0; i<text.value.length;i++) {
+            fakeText += type[i];
+            console.log(fakeText);
+        }
+        if (text.value.length>type.length){
+            text.value ="";
+        }else {
+            text.value = fakeText;
+            setTimeout("faking()",1);
+        }
+    }
+</script>
+</body>
+    </html>

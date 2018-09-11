@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let list1 = ["rice", "cat", "fish","roof"];
+    let list2 = ["cơm", "con mèo","cá"," mái nhà","Không tồn tại"];
+    let enter = prompt("Nhập từ cần tìm nghĩa");
+    result = "Từ bạn tra có nghĩa là ";
+    j = 1;
+    for(i = 0; i < list1.length; i++){
+        if(enter === list1[i]){
+            result += list2[i];
+        }
+        else{
+            j++;
+            if(j > list1.length){
+                result = "Không tìm thấy";
+            }
+        }
+    }
+    alert(result);
+</script>
+</body>
+</html>
